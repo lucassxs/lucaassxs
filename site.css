@@ -1,0 +1,140 @@
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: "telegrama";
+  src: url('telegraw.ttf');
+}
+
+body {
+  background-color: #000;
+}
+
+a:link {
+  color: #0c0
+}
+
+a:hover {
+  color: #0f0 !important;
+}
+
+a:visited {
+  color: #008e00
+}
+
+#background-triangles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.tabs {
+  width: 100%;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  padding-top: 1.3em;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.tab.animated {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+.telegrama {
+  font-family: "telegrama";
+}
+
+.tab, .tab:visited {
+  font-size: 3vmin;
+  font-family: "telegrama";
+  text-decoration: none;
+  transition: 0.3s ease;
+  color: #fff;
+  padding: 0.5vh;
+}
+
+.tab:active, .tab:hover {
+  font-family: "telegrama";
+  text-decoration: underline;
+  transition: 0.3s ease;
+  color: #0f0;
+}
+
+.links {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
+  padding: 1em;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.link.animated {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+.link>img {
+  height: 8vmin;
+  width: auto;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: .20s ease;
+  filter: alpha(opacity=60);
+}
+
+.highlighted {
+  color: #0c0 !important;
+}
+
+.highlighted:hover {
+  transition: .20s ease;
+  color: #0f0 !important;
+}
+
+.link>img:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+  transition: .20s ease;
+}
+
+.content-box {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  width: 70vw;
+  font-size: 2.1vw;
+  background-color: #1c1c1c;
+  color: #fff;
+  border-color: #0d0;
+  border-style: dashed;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
